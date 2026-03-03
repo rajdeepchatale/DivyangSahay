@@ -1,3 +1,13 @@
+# Environment variables / secrets
+.env
+.env.*
+!.env.example
+.env.local
+.env.development
+.env.production
+*.pem
+*.key
+
 # Logs
 logs
 *.log
