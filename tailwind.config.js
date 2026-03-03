@@ -1,0 +1,111 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        primary: {
+          50: '#e6f0ff',
+          100: '#b3d4ff',
+          200: '#80b8ff',
+          300: '#4d9cff',
+          400: '#1a80ff',
+          500: '#007bff',
+          600: '#0062cc',
+          700: '#004a99',
+          800: '#003166',
+          900: '#001933',
+        },
+        secondary: {
+          50: '#e8f5e9',
+          100: '#c8e6c9',
+          200: '#a5d6a7',
+          300: '#81c784',
+          400: '#66bb6a',
+          500: '#28a745',
+          600: '#218838',
+          700: '#1b6e2e',
+          800: '#155724',
+          900: '#0d3516',
+        },
+        accent: {
+          50: '#fff3e6',
+          100: '#ffe0b3',
+          200: '#ffcc80',
+          300: '#ffb84d',
+          400: '#ffa51a',
+          500: '#fd7e14',
+          600: '#e06b0a',
+          700: '#b35508',
+          800: '#804006',
+          900: '#4d2603',
+        },
+        danger: '#dc3545',
+        warning: '#ffc107',
+        surface: '#f5f5f5',
+        'text-primary': '#333333',
+      },
+      fontFamily: {
+        heading: ['Montserrat', 'Arial', 'sans-serif'],
+        body: ['Open Sans', 'Calibri', 'sans-serif'],
+      },
+      fontSize: {
+        'base': '1.125rem',
+        'lg': '1.25rem',
+        'xl': '1.5rem',
+        '2xl': '1.875rem',
+        '3xl': '2.25rem',
+        '4xl': '3rem',
+        '5xl': '3.75rem',
+      },
+      lineHeight: {
+        'relaxed': '1.6',
+        'loose': '1.8',
+      },
+      animation: {
+        'fade-in': 'fadeIn 0.5s ease-out',
+        'slide-up': 'slideUp 0.5s ease-out',
+        'slide-down': 'slideDown 0.3s ease-out',
+        'pulse-soft': 'pulseSoft 2s infinite',
+        'count-up': 'countUp 1s ease-out',
+        'bounce-in': 'bounceIn 0.6s ease-out',
+        'float': 'float 4s ease-in-out infinite',
+        'glow': 'glow-subtle 3s ease-in-out infinite',
+        'shimmer': 'shimmer 2s linear infinite',
+        'slide-in-right': 'slide-in-right 0.3s ease-out',
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        slideUp: {
+          '0%': { opacity: '0', transform: 'translateY(20px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        slideDown: {
+          '0%': { opacity: '0', transform: 'translateY(-10px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        pulseSoft: {
+          '0%, 100%': { opacity: '1' },
+          '50%': { opacity: '0.7' },
+        },
+        bounceIn: {
+          '0%': { opacity: '0', transform: 'scale(0.9)' },
+          '50%': { transform: 'scale(1.02)' },
+          '100%': { opacity: '1', transform: 'scale(1)' },
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-6px)' },
+        },
+      },
+    },
+  },
+  plugins: [],
+}

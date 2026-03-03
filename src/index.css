@@ -1,0 +1,1002 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-scale: 1;
+  --color-primary: #007bff;
+  --color-secondary: #28a745;
+  --color-accent: #fd7e14;
+  --color-surface: #f5f5f5;
+  --color-text: #333333;
+  --color-danger: #dc3545;
+  --color-warning: #ffc107;
+}
+
+/* High Contrast Mode */
+html.high-contrast {
+  --color-primary: #4da6ff;
+  --color-secondary: #5dd879;
+  --color-accent: #ffaa55;
+  --color-surface: #0a0a0a;
+  --color-text: #f0f0f0;
+  --color-danger: #ff6b7a;
+  --color-warning: #ffe066;
+}
+
+html.high-contrast body {
+  background-color: #0a0a0a !important;
+  color: #f0f0f0 !important;
+}
+
+html.high-contrast .bg-white,
+html.high-contrast .bg-surface {
+  background-color: #141414 !important;
+  color: #f0f0f0 !important;
+}
+
+html.high-contrast .bg-gray-50,
+html.high-contrast .bg-gray-100 {
+  background-color: #111111 !important;
+  color: #f0f0f0 !important;
+}
+
+html.high-contrast .text-gray-400,
+html.high-contrast .text-gray-500 {
+  color: #b0b0b0 !important;
+}
+
+html.high-contrast .text-gray-600,
+html.high-contrast .text-gray-700 {
+  color: #d0d0d0 !important;
+}
+
+html.high-contrast .text-text-primary,
+html.high-contrast .text-gray-800,
+html.high-contrast .text-gray-900 {
+  color: #f0f0f0 !important;
+}
+
+html.high-contrast .border-gray-200,
+html.high-contrast .border-gray-300 {
+  border-color: #444444 !important;
+}
+
+html.high-contrast .shadow-lg,
+html.high-contrast .shadow-md,
+html.high-contrast .shadow {
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.15), 0 4px 12px rgba(0, 0, 0, 0.5) !important;
+}
+
+html.high-contrast a {
+  color: #66b3ff !important;
+  text-decoration: underline;
+}
+
+html.high-contrast button {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+html.high-contrast input,
+html.high-contrast select,
+html.high-contrast textarea {
+  background-color: #1a1a1a !important;
+  color: #f0f0f0 !important;
+  border-color: #666666 !important;
+}
+
+/* Agent cards in high contrast */
+html.high-contrast .agent-card {
+  background: #1a1a1a !important;
+  border-color: #444 !important;
+}
+
+html.high-contrast .agent-card:hover {
+  border-color: #66b3ff !important;
+  box-shadow: 0 0 0 2px rgba(102, 179, 255, 0.3), 0 8px 24px rgba(0, 0, 0, 0.6) !important;
+}
+
+/* Agent badges */
+html.high-contrast .agent-badge {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  color: #f0f0f0 !important;
+}
+
+html.high-contrast .agent-badge.core {
+  color: #66b3ff !important;
+  border-color: #66b3ff !important;
+}
+
+html.high-contrast .agent-badge.bonus {
+  color: #ffaa55 !important;
+  border-color: #ffaa55 !important;
+}
+
+/* Glassmorphism cards */
+html.high-contrast .glass-card,
+html.high-contrast .glass-card-light {
+  background: #1a1a1a !important;
+  border-color: #444 !important;
+  backdrop-filter: none !important;
+}
+
+html.high-contrast .glass-card-light:hover {
+  background: #222 !important;
+  box-shadow: 0 0 0 2px rgba(102, 179, 255, 0.3) !important;
+}
+
+/* Gradient sections */
+html.high-contrast .gradient-hero {
+  background: #0a0a0a !important;
+  border-bottom: 2px solid #333 !important;
+}
+
+html.high-contrast .gradient-agents {
+  background: #0f0f0f !important;
+}
+
+html.high-contrast .gradient-cta {
+  background: #111 !important;
+  border-top: 2px solid #333 !important;
+}
+
+/* Footer in high contrast */
+html.high-contrast footer {
+  background: #0a0a0a !important;
+  border-top: 1px solid #333 !important;
+}
+
+html.high-contrast .border-gray-800 {
+  border-color: #444 !important;
+}
+
+/* Section titles & subtitles */
+html.high-contrast .section-title {
+  color: #f0f0f0 !important;
+}
+
+html.high-contrast .section-subtitle {
+  color: #b0b0b0 !important;
+}
+
+/* Notification panel & chatbot */
+html.high-contrast .bg-primary-50,
+html.high-contrast .bg-secondary-50,
+html.high-contrast .bg-accent-50,
+html.high-contrast .bg-blue-50,
+html.high-contrast .bg-purple-50,
+html.high-contrast .bg-pink-50,
+html.high-contrast .bg-teal-50,
+html.high-contrast .bg-red-50 {
+  background-color: #1a1a1a !important;
+}
+
+/* Scrollbar in contrast mode */
+html.high-contrast ::-webkit-scrollbar-track {
+  background: #111 !important;
+}
+
+html.high-contrast ::-webkit-scrollbar-thumb {
+  background: #555 !important;
+}
+
+html.high-contrast ::-webkit-scrollbar-thumb:hover {
+  background: #777 !important;
+}
+
+/* Hero text contrast */
+html.high-contrast .text-blue-50,
+html.high-contrast .text-blue-100,
+html.high-contrast .text-blue-200 {
+  color: #e0e0e0 !important;
+}
+
+html.high-contrast .text-green-300 {
+  color: #5dd879 !important;
+}
+
+/* Primary / secondary / accent text colors in high contrast */
+html.high-contrast .text-primary-500,
+html.high-contrast .text-primary-600,
+html.high-contrast .text-primary-700 {
+  color: #66b3ff !important;
+}
+
+html.high-contrast .text-secondary-400,
+html.high-contrast .text-secondary-500,
+html.high-contrast .text-secondary-600 {
+  color: #5dd879 !important;
+}
+
+html.high-contrast .text-accent-400,
+html.high-contrast .text-accent-500,
+html.high-contrast .text-accent-600 {
+  color: #ffaa55 !important;
+}
+
+html.high-contrast .text-purple-400,
+html.high-contrast .text-purple-500,
+html.high-contrast .text-purple-600 {
+  color: #c084fc !important;
+}
+
+html.high-contrast .text-blue-600,
+html.high-contrast .text-blue-700 {
+  color: #66b3ff !important;
+}
+
+html.high-contrast .text-green-400,
+html.high-contrast .text-green-500,
+html.high-contrast .text-green-600 {
+  color: #5dd879 !important;
+}
+
+html.high-contrast .text-red-500,
+html.high-contrast .text-red-600 {
+  color: #ff6b7a !important;
+}
+
+html.high-contrast .text-yellow-500,
+html.high-contrast .text-yellow-600 {
+  color: #ffe066 !important;
+}
+
+html.high-contrast .text-orange-500,
+html.high-contrast .text-orange-600 {
+  color: #ffaa55 !important;
+}
+
+/* Gradient text → solid color in high contrast */
+html.high-contrast .text-gradient,
+html.high-contrast .text-gradient-blue {
+  -webkit-text-fill-color: #66b3ff !important;
+  color: #66b3ff !important;
+  background: none !important;
+}
+
+/* Step number badges (gradient bg circles for How It Works) */
+html.high-contrast .bg-gradient-to-br,
+html.high-contrast .bg-gradient-to-r,
+html.high-contrast .bg-gradient-to-tr {
+  border: 1px solid #666 !important;
+}
+
+/* Buttons in high contrast */
+html.high-contrast .btn-primary,
+html.high-contrast .bg-primary-500 {
+  background-color: #3388ff !important;
+  color: #ffffff !important;
+  border-color: #66b3ff !important;
+}
+
+html.high-contrast .btn-secondary,
+html.high-contrast .bg-secondary-500 {
+  background-color: #28a745 !important;
+  color: #ffffff !important;
+  border-color: #5dd879 !important;
+}
+
+html.high-contrast .btn-accent,
+html.high-contrast .bg-accent-500 {
+  background-color: #e67300 !important;
+  color: #ffffff !important;
+  border-color: #ffaa55 !important;
+}
+
+html.high-contrast .btn-outline {
+  border-color: #66b3ff !important;
+  color: #66b3ff !important;
+}
+
+/* Cards and containers */
+html.high-contrast .card,
+html.high-contrast .bg-white\/90,
+html.high-contrast [class*="bg-white"] {
+  background-color: #1a1a1a !important;
+  color: #f0f0f0 !important;
+}
+
+html.high-contrast .border-gray-100 {
+  border-color: #333 !important;
+}
+
+html.high-contrast .shadow-sm {
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Chatbot & Voice panel in high contrast */
+html.high-contrast #chatbot-window,
+html.high-contrast [aria-label="DivyangSahay AI Assistant"] {
+  background-color: #141414 !important;
+  border-color: #444 !important;
+}
+
+html.high-contrast #chatbot-window .bg-gray-50,
+html.high-contrast [aria-label="DivyangSahay AI Assistant"] .bg-gray-50 {
+  background-color: #0f0f0f !important;
+}
+
+html.high-contrast [role="dialog"] {
+  background-color: #141414 !important;
+  border-color: #444 !important;
+}
+
+/* Form labels in high contrast */
+html.high-contrast .form-label,
+html.high-contrast label {
+  color: #e0e0e0 !important;
+}
+
+html.high-contrast .form-field {
+  background-color: #1a1a1a !important;
+  color: #f0f0f0 !important;
+  border-color: #555 !important;
+}
+
+html.high-contrast .form-helper {
+  color: #aaa !important;
+}
+
+/* White text over gradients stays visible */
+html.high-contrast .text-white {
+  color: #ffffff !important;
+}
+
+html.high-contrast .text-white\/70,
+html.high-contrast .text-white\/80,
+html.high-contrast .text-white\/90 {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Ping animation for floating buttons */
+@keyframes ping {
+  0% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+
+  75%,
+  100% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+/* Voice Assistant Panel Styles */
+.voice-panel-bg {
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.voice-response-box {
+  background: linear-gradient(135deg, #f0e6ff, #e6f0ff);
+  border-color: rgba(111, 66, 193, 0.15);
+}
+
+.voice-response-box p {
+  color: #333 !important;
+}
+
+.voice-transcript p {
+  color: #333 !important;
+}
+
+/* HIGH CONTRAST: Voice & Chatbot panels */
+html.high-contrast .voice-panel-bg {
+  background: #141414 !important;
+  border: 1px solid #555 !important;
+  backdrop-filter: none !important;
+}
+
+html.high-contrast .voice-response-box {
+  background: #1e1e2e !important;
+  border-color: #6f42c1 !important;
+}
+
+html.high-contrast .voice-response-box p {
+  color: #e0e0e0 !important;
+}
+
+html.high-contrast .voice-transcript {
+  background: #1a1a1a !important;
+  border-color: #444 !important;
+}
+
+html.high-contrast .voice-transcript p {
+  color: #e0e0e0 !important;
+}
+
+html.high-contrast .voice-response-box .text-purple-500,
+html.high-contrast .voice-response-box .text-purple-400 {
+  color: #c084fc !important;
+}
+
+/* HIGH CONTRAST: Chatbot message bubbles */
+html.high-contrast #chatbot-window .bg-white {
+  background-color: #1a1a1a !important;
+}
+
+html.high-contrast #chatbot-window .text-gray-700 {
+  color: #e0e0e0 !important;
+}
+
+html.high-contrast #chatbot-window .bg-gray-100 {
+  background-color: #222 !important;
+}
+
+/* HIGH CONTRAST: Quick reply chips */
+html.high-contrast .bg-primary-50.text-primary-600 {
+  background-color: #1a2a3a !important;
+  color: #66b3ff !important;
+}
+
+/* HIGH CONTRAST: Header gradient bars keep their color */
+html.high-contrast [style*="gradient"] {
+  border-bottom: 1px solid #555 !important;
+}
+
+/* HIGH CONTRAST: CTA button on hero/gradient */
+html.high-contrast .gradient-cta .btn,
+html.high-contrast .gradient-hero .btn {
+  color: #ffffff !important;
+}
+
+html.high-contrast .bg-white.text-primary-600 {
+  background: #1a1a1a !important;
+  color: #66b3ff !important;
+  border: 1px solid #66b3ff !important;
+}
+
+/* HIGH CONTRAST: form card containers */
+html.high-contrast .card {
+  background-color: #141414 !important;
+  border-color: #444 !important;
+  color: #f0f0f0 !important;
+}
+
+html.high-contrast .card .text-gray-900,
+html.high-contrast .card h3 {
+  color: #f0f0f0 !important;
+}
+
+html.high-contrast .card .text-gray-600 {
+  color: #bbbbbb !important;
+}
+
+html.high-contrast .card .text-gray-500 {
+  color: #aaaaaa !important;
+}
+
+/* HIGH CONTRAST: Impact cards with colored borders */
+html.high-contrast .border-primary-100,
+html.high-contrast .border-primary-200 {
+  border-color: #3388ff !important;
+}
+
+html.high-contrast .border-secondary-100 {
+  border-color: #28a745 !important;
+}
+
+/* HIGH CONTRAST: check marks in agent cards */
+html.high-contrast .text-secondary-400 {
+  color: #5dd879 !important;
+}
+
+/* HIGH CONTRAST: Chatbot panel */
+html.high-contrast .chatbot-panel {
+  background: #141414 !important;
+  border-color: #555 !important;
+}
+
+html.high-contrast .chatbot-messages-area {
+  background: #0f0f0f !important;
+}
+
+html.high-contrast .chatbot-messages-area .bg-white {
+  background: #1a1a1a !important;
+  color: #e0e0e0 !important;
+}
+
+html.high-contrast .chatbot-messages-area .text-gray-700 {
+  color: #e0e0e0 !important;
+}
+
+html.high-contrast .chatbot-messages-area .border-gray-100 {
+  border-color: #333 !important;
+}
+
+html.high-contrast .chatbot-panel .bg-gray-100,
+html.high-contrast .chatbot-panel .bg-gray-50 {
+  background: #1a1a1a !important;
+}
+
+/* HIGH CONTRAST: Section backgrounds */
+html.high-contrast .bg-white {
+  background-color: #0d0d0d !important;
+}
+
+html.high-contrast .bg-gray-50 {
+  background-color: #111111 !important;
+}
+
+/* HIGH CONTRAST: Glass cards */
+html.high-contrast .glass-card-light {
+  background: #1a1a1a !important;
+  border-color: #444 !important;
+  color: #f0f0f0 !important;
+}
+
+html.high-contrast .glass-card-light h3 {
+  color: #f0f0f0 !important;
+}
+
+html.high-contrast .glass-card-light p {
+  color: #ccc !important;
+}
+
+/* HIGH CONTRAST: all gray text must be readable */
+html.high-contrast .text-gray-400 {
+  color: #999 !important;
+}
+
+html.high-contrast .text-gray-500 {
+  color: #aaa !important;
+}
+
+html.high-contrast .text-gray-600 {
+  color: #bbb !important;
+}
+
+html.high-contrast .text-gray-700 {
+  color: #ddd !important;
+}
+
+html.high-contrast .text-gray-900 {
+  color: #f0f0f0 !important;
+}
+
+/* HIGH CONTRAST: Section titles / subtitles */
+html.high-contrast .section-title {
+  color: #f0f0f0 !important;
+}
+
+html.high-contrast .section-subtitle {
+  color: #bbb !important;
+}
+
+/* HIGH CONTRAST: Agent cards */
+html.high-contrast .agent-card {
+  background: #1a1a1a !important;
+  border-color: #444 !important;
+}
+
+html.high-contrast .agent-card h3 {
+  color: #f0f0f0 !important;
+}
+
+html.high-contrast .agent-card p {
+  color: #bbb !important;
+}
+
+/* Scroll Animations */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animate-on-scroll.animate-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animate-on-scroll.animate-scale {
+  transform: scale(0.92);
+}
+
+.animate-on-scroll.animate-scale.animate-visible {
+  transform: scale(1);
+}
+
+/* Stagger children */
+.animate-stagger>.animate-on-scroll:nth-child(1) {
+  transition-delay: 0ms;
+}
+
+.animate-stagger>.animate-on-scroll:nth-child(2) {
+  transition-delay: 100ms;
+}
+
+.animate-stagger>.animate-on-scroll:nth-child(3) {
+  transition-delay: 200ms;
+}
+
+.animate-stagger>.animate-on-scroll:nth-child(4) {
+  transition-delay: 300ms;
+}
+
+.animate-stagger>.animate-on-scroll:nth-child(5) {
+  transition-delay: 400ms;
+}
+
+.animate-stagger>.animate-on-scroll:nth-child(6) {
+  transition-delay: 500ms;
+}
+
+.animate-stagger>.animate-on-scroll:nth-child(7) {
+  transition-delay: 600ms;
+}
+
+.animate-stagger>.animate-on-scroll:nth-child(8) {
+  transition-delay: 700ms;
+}
+
+/* Hero fade-in */
+@keyframes heroFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: heroFadeIn 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Floating particles */
+@keyframes floatParticle {
+
+  0%,
+  100% {
+    transform: translateY(0) translateX(0);
+    opacity: 0.4;
+  }
+
+  25% {
+    transform: translateY(-20px) translateX(10px);
+    opacity: 0.7;
+  }
+
+  50% {
+    transform: translateY(-35px) translateX(-5px);
+    opacity: 0.5;
+  }
+
+  75% {
+    transform: translateY(-15px) translateX(-10px);
+    opacity: 0.6;
+  }
+}
+
+.animate-float-particle {
+  animation: floatParticle 6s ease-in-out infinite;
+}
+
+/* Card hover lift */
+.card-hover-lift {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+
+.card-hover-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 123, 255, 0.15);
+}
+
+/* Font Scale */
+html {
+  font-size: calc(18px * var(--font-scale));
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    @apply font-body text-text-primary bg-surface leading-relaxed;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading font-bold;
+  }
+
+  /* Skip to Content */
+  .skip-to-content {
+    @apply absolute -top-10 left-0 bg-primary-500 text-white px-4 py-2 z-[100] transition-all;
+  }
+
+  .skip-to-content:focus {
+    @apply top-0;
+  }
+
+  /* Focus Indicators */
+  *:focus-visible {
+    @apply outline-none ring-[3px] ring-primary-500 ring-offset-2;
+  }
+
+  /* Reduce motion */
+  @media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-semibold text-base transition-all duration-200 cursor-pointer;
+    @apply focus-visible:ring-[3px] focus-visible:ring-offset-2;
+    @apply disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-primary {
+    @apply btn bg-primary-500 text-white hover:bg-primary-600 active:bg-primary-700;
+    @apply focus-visible:ring-primary-500;
+  }
+
+  .btn-secondary {
+    @apply btn bg-secondary-500 text-white hover:bg-secondary-600 active:bg-secondary-700;
+    @apply focus-visible:ring-secondary-500;
+  }
+
+  .btn-accent {
+    @apply btn bg-accent-500 text-white hover:bg-accent-600 active:bg-accent-700;
+    @apply focus-visible:ring-accent-500;
+  }
+
+  .btn-outline {
+    @apply btn border-2 border-primary-500 text-primary-500 hover:bg-primary-50 active:bg-primary-100;
+    @apply focus-visible:ring-primary-500;
+  }
+
+  .card {
+    @apply bg-white rounded-xl shadow-md p-6 transition-all duration-200 hover:shadow-lg;
+  }
+
+  /* Glassmorphism card */
+  .glass-card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    @apply rounded-2xl p-6 transition-all duration-300;
+  }
+
+  .glass-card-light {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    @apply rounded-2xl p-6 shadow-lg transition-all duration-300;
+  }
+
+  .glass-card-light:hover {
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 8px 32px rgba(0, 123, 255, 0.12);
+    transform: translateY(-2px);
+  }
+
+  /* Agent badge */
+  .agent-badge {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold;
+    background: linear-gradient(135deg, rgba(0, 123, 255, 0.1), rgba(40, 167, 69, 0.1));
+    border: 1px solid rgba(0, 123, 255, 0.2);
+    animation: glow-subtle 3s ease-in-out infinite;
+  }
+
+  .agent-badge.core {
+    background: linear-gradient(135deg, rgba(0, 123, 255, 0.15), rgba(99, 102, 241, 0.15));
+    border: 1px solid rgba(0, 123, 255, 0.3);
+    color: #007bff;
+  }
+
+  .agent-badge.bonus {
+    background: linear-gradient(135deg, rgba(253, 126, 20, 0.15), rgba(220, 53, 69, 0.15));
+    border: 1px solid rgba(253, 126, 20, 0.3);
+    color: #fd7e14;
+  }
+
+  /* Agent card */
+  .agent-card {
+    @apply rounded-2xl p-6 transition-all duration-300 relative overflow-hidden cursor-pointer;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  }
+
+  .agent-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 123, 255, 0.15);
+    border-color: rgba(0, 123, 255, 0.2);
+  }
+
+  .agent-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--agent-color-start, #007bff), var(--agent-color-end, #28a745));
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .agent-card:hover::before {
+    opacity: 1;
+  }
+
+  /* Agent icon container */
+  .agent-icon {
+    @apply w-14 h-14 rounded-2xl flex items-center justify-center text-2xl mb-4;
+    animation: float 4s ease-in-out infinite;
+  }
+
+  .form-field {
+    @apply w-full px-4 py-3 rounded-lg border-2 border-gray-300 text-base bg-white;
+    @apply transition-all duration-200;
+    @apply focus:border-primary-500 focus:ring-0 focus:outline-none;
+    @apply placeholder:text-gray-400;
+  }
+
+  .form-field[aria-invalid="true"] {
+    @apply border-danger;
+  }
+
+  .form-label {
+    @apply block text-base font-semibold text-gray-700 mb-1;
+  }
+
+  .form-helper {
+    @apply text-sm text-gray-500 mt-1;
+  }
+
+  .form-error {
+    @apply text-sm text-danger mt-1 flex items-center gap-1;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-heading font-bold text-center mb-4;
+  }
+
+  .section-subtitle {
+    @apply text-lg text-gray-600 text-center max-w-2xl mx-auto mb-12;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-500 to-secondary-500;
+  }
+
+  .text-gradient-blue {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, #007bff, #6366f1);
+  }
+
+  .gradient-hero {
+    background: linear-gradient(135deg, #0a1628 0%, #0d2847 30%, #0f3460 60%, #1a5276 100%);
+  }
+
+  .gradient-hero-soft {
+    background: linear-gradient(135deg, #e6f0ff 0%, #e8f5e9 100%);
+  }
+
+  .gradient-agents {
+    background: linear-gradient(135deg, #f0f4ff 0%, #f5fdf5 50%, #fff8f0 100%);
+  }
+
+  .gradient-cta {
+    background: linear-gradient(135deg, #007bff 0%, #6366f1 50%, #28a745 100%);
+  }
+}
+
+/* Animations */
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes glow-subtle {
+
+  0%,
+  100% {
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.1);
+  }
+
+  50% {
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.2);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+
+  100% {
+    background-position: 200% center;
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-400 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-500;
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
+  }
+}
