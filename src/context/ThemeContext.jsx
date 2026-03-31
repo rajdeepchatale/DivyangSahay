@@ -3,11 +3,7 @@ import { createContext, useContext, useState, useEffect } from 'react';
 const ThemeContext = createContext();
 
 export function ThemeProvider({ children }) {
-  const [isDark, setIsDark] = useState(() => {
-    const saved = localStorage.getItem('portfolio-theme');
-    if (saved) return saved === 'dark';
-    return true; // Default to dark mode for new visitors
-  });
+  const [isDark, setIsDark] = useState(true); // Always start in dark mode
 
   useEffect(() => {
     const root = document.documentElement;
