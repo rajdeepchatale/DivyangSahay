@@ -6,7 +6,7 @@ export function ThemeProvider({ children }) {
   const [isDark, setIsDark] = useState(() => {
     const saved = localStorage.getItem('portfolio-theme');
     if (saved) return saved === 'dark';
-    return window.matchMedia('(prefers-color-scheme: dark)').matches;
+    return true; // Default to dark mode for new visitors
   });
 
   useEffect(() => {
