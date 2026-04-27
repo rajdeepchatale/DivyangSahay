@@ -1,182 +1,62 @@
-# ♿ DivyangSahay — AI-Powered Benefit Assistant for Persons with Disabilities
+# DivyangSahay
 
-> **Empowering 26 Million Indians with Access to Rights & Benefits**
+An AI-powered platform that helps persons with disabilities in India discover and access government benefits. Users answer a few profile questions and the system matches them to eligible schemes, generates application drafts, and locates nearby service centers — all in 6 Indian languages.
 
-DivyangSahay is an AI-powered platform that helps persons with disabilities (Divyangjan) in India discover, understand, and apply for government schemes and benefits. Built with **8 specialized AI agents**, it simplifies the entire journey — from eligibility matching to application submission — in **6 Indian languages**.
+## What It Does
 
-🔗 **Live Demo:** [divyangsahay.vercel.app](https://divyangsahay.vercel.app)
+- **Eligibility Matching** — Matches users to government schemes based on disability type/percentage, income, age, state, and education.
+- **Application Drafts** — Generates pre-filled applications with document checklists and step-by-step submission instructions.
+- **CSC Locator** — Interactive map to find the nearest Common Service Center with distance, address, and available services.
+- **Multilingual Support** — Full UI translation in English, Hindi, Tamil, Telugu, Bengali, and Marathi.
+- **AI Chatbot** — Natural-language Q&A assistant powered by Google Gemini for answering questions about schemes, documents, and rights.
+- **Voice Assistant** — Speech-to-text and text-to-speech interface for visually impaired users with voice navigation commands.
+- **Accessibility** — High contrast mode, adjustable font size, keyboard navigation, and screen reader support (WCAG 2.1 AA).
 
----
+## Tech Stack
 
-## 🚀 Features
+- **React 19** with React Router v6
+- **Vite 5** for build tooling
+- **Tailwind CSS 3** for styling
+- **Google Gemini 2.0 Flash** for AI features
+- **Leaflet** for interactive maps
+- **Web Speech API** for voice input/output
 
-### 🤖 8 AI Agents
-
-| # | Agent | Type | Description |
-|---|-------|------|-------------|
-| 1 | **Eligibility Matching** | Core | Multi-criteria AI matching based on disability %, income, age, state, and education |
-| 2 | **Application Draft Generator** | Core | Auto-generates pre-filled application forms with document checklists |
-| 3 | **Multi-Language Translation** | Core | Context-aware translation in 6 languages (English, Hindi, Tamil, Telugu, Bengali, Marathi) |
-| 4 | **CSC Locator & Navigation** | Core | Interactive map to find nearest Common Service Centers with distance and services |
-| 5 | **Document Verification** | Advanced | Validates uploaded documents for completeness and correctness |
-| 6 | **Notification & Reminder** | Advanced | Deadline alerts and status update notifications |
-| 7 | **Q&A Support Chatbot** | Advanced | Natural-language chatbot powered by Google Gemini AI for 24/7 assistance |
-| 8 | **Voice Assistant** | Advanced | Full voice-based interaction with Speech-to-Text and Text-to-Speech for visually impaired users |
-
-### ♿ Accessibility-First Design
-- **WCAG 2.1 AA** compliant
-- Full **keyboard navigation**
-- **High contrast mode** toggle
-- **Screen reader** ready
-- **Adjustable font size** controls
-- **Voice commands** for hands-free navigation
-
-### 🇮🇳 Government Schemes Covered
-- IGNDPS (Disability Pension)
-- ADIP (Free Assistive Devices)
-- UDID (Unique Disability Identity Card)
-- Scholarships for Students with Disabilities
-- Railway & Travel Concessions
-- NHFDC Self-Employment Loans
-- DDRS (Rehabilitation & Training)
-- State-Level Disability Pensions
-
----
-
-## 🛠️ Tech Stack
-
-| Layer | Technology |
-|-------|-----------|
-| **Frontend** | React 19, React Router v6 |
-| **Build Tool** | Vite 5 |
-| **Styling** | Tailwind CSS 3 |
-| **AI Engine** | Google Gemini 2.0 Flash (`@google/generative-ai`) |
-| **Maps** | Leaflet + React-Leaflet |
-| **Voice** | Web Speech API (Speech Recognition + Speech Synthesis) |
-| **Fonts** | Montserrat, Open Sans (Google Fonts) |
-| **Icons** | Font Awesome 6 |
-
----
-
-## 📁 Project Structure
-
-```
-DivyangSahay/
-├── public/                  # Static assets
-├── src/
-│   ├── components/          # Reusable UI components
-│   │   ├── AccessibilityToolbar.jsx
-│   │   ├── AnimateOnScroll.jsx
-│   │   ├── BenefitCard.jsx
-│   │   ├── Chatbot.jsx
-│   │   ├── Footer.jsx
-│   │   ├── Header.jsx
-│   │   ├── LoadingSpinner.jsx
-│   │   ├── NotificationPanel.jsx
-│   │   ├── StatsCard.jsx
-│   │   ├── Toast.jsx
-│   │   └── VoiceAssistant.jsx
-│   ├── context/             # React Context providers
-│   │   ├── AppContext.jsx
-│   │   ├── LanguageContext.jsx
-│   │   └── ThemeContext.jsx
-│   ├── data/                # Static data & translations
-│   │   ├── cscCenters.js
-│   │   ├── profileData.js
-│   │   ├── schemes.js
-│   │   ├── states.js
-│   │   └── translations.js
-│   ├── pages/               # Route pages
-│   │   ├── About.jsx
-│   │   ├── ApplicationDraft.jsx
-│   │   ├── CSCLocator.jsx
-│   │   ├── EligibilityCheck.jsx
-│   │   ├── Home.jsx
-│   │   └── Results.jsx
-│   ├── services/            # AI service layer
-│   │   └── aiService.js
-│   ├── utils/               # Utility functions
-│   │   ├── eligibility.js
-│   │   └── storage.js
-│   ├── App.jsx              # Root component with routing
-│   ├── main.jsx             # Entry point
-│   └── index.css            # Global styles
-├── .env.example             # Environment variable template
-├── index.html               # HTML entry point
-├── package.json
-├── tailwind.config.js
-├── postcss.config.js
-├── vite.config.js
-└── eslint.config.js
-```
-
----
-
-## ⚡ Getting Started
-
-### Prerequisites
-- **Node.js** 18+ and **npm** 9+
-- A **Google Gemini API key** (free at [aistudio.google.com](https://aistudio.google.com/app/apikey))
-
-### Installation
+## Getting Started
 
 ```bash
-# Clone the repository
-git clone https://github.com/rajdeepchatale/DivyangSahay.git
-cd DivyangSahay
-
 # Install dependencies
 npm install
 
-# Set up environment variables
+# Copy env template and add your Gemini API key
 cp .env.example .env
-# Edit .env and add your Gemini API key
-```
 
-### Running Locally
-
-```bash
+# Start dev server
 npm run dev
 ```
 
-The app will be available at `http://localhost:5173`.
+Opens at `http://localhost:5173`. Works without an API key — the chatbot and voice assistant fall back to built-in responses.
 
-> **Note:** The app works without an API key too — it uses intelligent fallback responses for the chatbot and voice assistant when no key is configured.
+## Environment Variables
 
-### Production Build
+| Variable | Description |
+|----------|-------------|
+| `VITE_GEMINI_API_KEY` | Google Gemini API key ([get one here](https://aistudio.google.com/app/apikey)). Optional — fallback responses are used without it. |
+
+## Project Structure
+
+```
+src/
+├── components/    # UI components (Header, Chatbot, VoiceAssistant, etc.)
+├── context/       # React Context (App state, Language, Theme)
+├── data/          # Schemes, CSC centers, translations, state lists
+├── pages/         # Route pages (Home, EligibilityCheck, Results, CSCLocator, About)
+├── services/      # AI service layer (Gemini integration + fallbacks)
+└── utils/         # Eligibility logic, local storage helpers
+```
+
+## Build
 
 ```bash
 npm run build
 npm run preview
 ```
-
----
-
-## 🔑 Environment Variables
-
-| Variable | Description | Required |
-|----------|-------------|----------|
-| `VITE_GEMINI_API_KEY` | Google Gemini API key for AI features | Optional (fallback responses are used without it) |
-
----
-
-## 🌐 Deployment
-
-The project is deployed on **Vercel**. To deploy your own instance:
-
-1. Push the code to a GitHub repository
-2. Import the repo on [vercel.com](https://vercel.com)
-3. Add `VITE_GEMINI_API_KEY` as an environment variable
-4. Deploy — Vercel auto-detects Vite configuration
-
----
-
-## 👥 Team Paradox
-
-Built with ❤️ for the hackathon by **Team Paradox**.
-
----
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
