@@ -8,11 +8,6 @@ const roadmap = [
     { phase: 'Phase 3', title: 'Mobile App', desc: 'AI document verification, blockchain records', status: 'upcoming', icon: 'fas fa-mobile-alt' },
 ];
 
-const team = [
-    { name: 'Anay Malichkar', role: 'Lead Developer', icon: 'fas fa-code', color: 'bg-primary-50 text-primary-500' },
-    { name: 'Yash Patil', role: 'AI/ML Engineer', icon: 'fas fa-brain', color: 'bg-secondary-50 text-secondary-500' },
-    { name: 'Rajdeep Chatale', role: 'Accessibility & UX', icon: 'fas fa-universal-access', color: 'bg-accent-50 text-accent-500' },
-];
 
 export default function About() {
     const { addToast } = useApp();
@@ -126,26 +121,6 @@ export default function About() {
                 </div>
             </section>
 
-            {/* Team */}
-            <section className="py-16 sm:py-20 bg-white" aria-labelledby="team-heading">
-                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <AnimateOnScroll>
-                        <h2 id="team-heading" className="section-title">Meet the <span className="text-gradient">Team</span></h2>
-                        <p className="section-subtitle">The passionate minds behind DivyangSahay</p>
-                    </AnimateOnScroll>
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 animate-stagger">
-                        {team.map((member, i) => (
-                            <AnimateOnScroll key={i} variant="scale">
-                                <div className="card text-center group card-hover-lift">
-                                    <div className={`w-20 h-20 rounded-full ${member.color} flex items-center justify-center mx-auto mb-4 text-3xl group-hover:scale-110 transition-transform duration-300`}><i className={member.icon} aria-hidden="true"></i></div>
-                                    <h3 className="font-heading font-bold text-gray-900">{member.name}</h3>
-                                    <p className="text-sm text-gray-500">{member.role}</p>
-                                </div>
-                            </AnimateOnScroll>
-                        ))}
-                    </div>
-                </div>
-            </section>
 
             {/* Contact */}
             <section className="py-16 sm:py-20 bg-gray-50" aria-labelledby="contact-heading">
