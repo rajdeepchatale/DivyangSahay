@@ -16,6 +16,8 @@ DivyangSahay bridges the gap between India's 26 million persons with disabilitie
 - [Usage](#usage)
 - [Deployment](#deployment)
 - [Contributing](#contributing)
+- [License](#license)
+- [Acknowledgements](#acknowledgements)
 
 ---
 
@@ -38,6 +40,9 @@ Natural-language Q&A assistant powered by Google Gemini. Trained with comprehens
 
 **Voice Assistant**
 Full speech-based interaction using the Web Speech API. Supports voice commands for navigation, accessibility controls, and conversational queries — designed for visually impaired users.
+
+**Document Verification**
+Simulated OCR-powered document validation that checks uploaded documents for completeness and correctness before submission.
 
 **Accessibility**
 Built with accessibility-first principles:
@@ -188,3 +193,18 @@ Any static hosting platform that supports single-page applications will work. Th
 3. Commit your changes (`git commit -m 'Add your feature'`)
 4. Push to the branch (`git push origin feature/your-feature`)
 5. Open a Pull Request
+
+---
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## Acknowledgements
+
+- **RPwD Act 2016** — The Rights of Persons with Disabilities Act that defines 21 disability types and the legal framework this platform builds upon.
+- **Google Gemini** — Powers the AI chatbot and voice assistant with natural language understanding.
+- **Common Service Centers (CSC)** — Government-authorized digital service points that enable last-mile benefit delivery.
+- Built with ❤️ by Anay Malichkar, Yash Patil, and Rajdeep Chatale.

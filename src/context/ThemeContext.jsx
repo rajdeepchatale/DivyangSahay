@@ -12,7 +12,7 @@ export function ThemeProvider({ children }) {
     } else {
       root.classList.remove('dark');
     }
-    localStorage.setItem('portfolio-theme', isDark ? 'dark' : 'light');
+    localStorage.setItem('divyangsahay-theme', isDark ? 'dark' : 'light');
   }, [isDark]);
 
   const toggleTheme = () => setIsDark(prev => !prev);

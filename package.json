@@ -1,8 +1,14 @@
 {
-  "name": "paradox",
+  "name": "divyangsahay",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "AI-Powered Benefit Assistant for Persons with Disabilities in India",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rajdeepchatale/DivyangSahay.git"
+  },
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

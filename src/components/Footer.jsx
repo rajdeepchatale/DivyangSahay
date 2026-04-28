@@ -40,10 +40,9 @@ export default function Footer() {
                         {/* Social Icons */}
                         <div className="flex gap-3" aria-label="Social media links">
                             {[
-                                { icon: 'fab fa-twitter', label: 'Twitter', href: '#' },
-                                { icon: 'fab fa-facebook', label: 'Facebook', href: '#' },
+                                { icon: 'fab fa-github', label: 'GitHub', href: 'https://github.com/rajdeepchatale/DivyangSahay' },
                                 { icon: 'fab fa-linkedin', label: 'LinkedIn', href: '#' },
-                                { icon: 'fab fa-youtube', label: 'YouTube', href: '#' },
+                                { icon: 'fab fa-twitter', label: 'Twitter', href: '#' },
                             ].map((social) => (
                                 <a
                                     key={social.label}
