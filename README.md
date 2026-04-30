@@ -1,5 +1,7 @@
 # DivyangSahay
 
+![Status](https://img.shields.io/badge/status-active-brightgreen) ![Last Updated](https://img.shields.io/badge/last%20updated-April%202026-blue)
+
 **AI-Powered Benefit Assistant for Persons with Disabilities in India**
 
 DivyangSahay bridges the gap between India's 26 million persons with disabilities and the government benefits they are entitled to. Nearly 70% of disability benefits go unclaimed every year due to complex eligibility rules, language barriers, and inaccessible application processes. This platform uses AI to simplify that entire journey — from discovering schemes to submitting applications.
