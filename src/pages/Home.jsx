@@ -405,6 +405,109 @@ export default function Home() {
                 </div>
             </section>
 
+            {/* Key Schemes & Real Impact */}
+            <section className="py-16 sm:py-20 bg-white" aria-labelledby="impact-heading">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <AnimateOnScroll>
+                        <div className="text-center mb-14">
+                            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary-50 text-secondary-600 text-sm font-semibold mb-4">
+                                <i className="fas fa-chart-line" aria-hidden="true"></i>
+                                Key Government Schemes
+                            </div>
+                            <h2 id="impact-heading" className="section-title">
+                                Schemes That Make a Difference
+                            </h2>
+                            <p className="section-subtitle">
+                                Major government programs our AI matches you with — covering pensions, assistive devices, education, and employment.
+                            </p>
+                        </div>
+                    </AnimateOnScroll>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 animate-stagger">
+                        {[
+                            {
+                                icon: 'fas fa-hand-holding-usd',
+                                title: 'IGNDPS Pension',
+                                amount: '₹300–₹500/month',
+                                description: 'Indira Gandhi National Disability Pension Scheme for BPL citizens aged 18–79 with 80%+ disability.',
+                                color: 'text-primary-500',
+                                bg: 'bg-primary-50',
+                            },
+                            {
+                                icon: 'fas fa-wheelchair',
+                                title: 'ADIP Scheme',
+                                amount: 'Up to ₹10,000',
+                                description: 'Assistance for purchase of assistive devices like wheelchairs, hearing aids, crutches, and prosthetics.',
+                                color: 'text-secondary-500',
+                                bg: 'bg-secondary-50',
+                            },
+                            {
+                                icon: 'fas fa-id-card',
+                                title: 'UDID Card',
+                                amount: 'Universal ID',
+                                description: 'Unique Disability ID card that serves as a single document for availing all disability-related benefits.',
+                                color: 'text-accent-500',
+                                bg: 'bg-accent-50',
+                            },
+                            {
+                                icon: 'fas fa-graduation-cap',
+                                title: 'Scholarship Schemes',
+                                amount: '₹500–₹1,200/month',
+                                description: 'Pre-matric and post-matric scholarships for students with disabilities covering tuition, books, and living expenses.',
+                                color: 'text-purple-500',
+                                bg: 'bg-purple-50',
+                            },
+                            {
+                                icon: 'fas fa-briefcase',
+                                title: 'Employment Quota',
+                                amount: '4% Reservation',
+                                description: 'Government sector jobs reserved for persons with disabilities under the RPwD Act 2016 across identified posts.',
+                                color: 'text-blue-500',
+                                bg: 'bg-blue-50',
+                            },
+                            {
+                                icon: 'fas fa-train',
+                                title: 'Travel Concessions',
+                                amount: '50–75% Off',
+                                description: 'Discounted rail and air travel for persons with disabilities and their escorts on Indian Railways and Air India.',
+                                color: 'text-pink-500',
+                                bg: 'bg-pink-50',
+                            },
+                        ].map((scheme, i) => (
+                            <AnimateOnScroll key={i} variant="scale">
+                                <div className="glass-card-light card-hover-lift group">
+                                    <div className="flex items-start gap-4">
+                                        <div className={`w-14 h-14 rounded-2xl ${scheme.bg} flex items-center justify-center ${scheme.color} text-xl flex-shrink-0 group-hover:scale-110 transition-transform duration-300`}>
+                                            <i className={scheme.icon} aria-hidden="true"></i>
+                                        </div>
+                                        <div>
+                                            <h3 className="font-heading font-bold text-base text-gray-900 mb-1">{scheme.title}</h3>
+                                            <span className={`inline-block text-xs font-bold ${scheme.color} ${scheme.bg} px-2 py-0.5 rounded-full mb-2`}>
+                                                {scheme.amount}
+                                            </span>
+                                            <p className="text-sm text-gray-500 leading-relaxed">{scheme.description}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </AnimateOnScroll>
+                        ))}
+                    </div>
+
+                    <AnimateOnScroll>
+                        <div className="text-center mt-10">
+                            <p className="text-sm text-gray-400 mb-4">
+                                <i className="fas fa-info-circle mr-1" aria-hidden="true"></i>
+                                Benefit amounts are approximate and vary by state. Our AI provides personalized matching based on your profile.
+                            </p>
+                            <Link to="/eligibility" className="btn-outline text-base px-6 py-3">
+                                <i className="fas fa-search" aria-hidden="true"></i>
+                                Check Your Eligibility Now
+                            </Link>
+                        </div>
+                    </AnimateOnScroll>
+                </div>
+            </section>
+
             {/* CTA Section */}
             <section className="py-16 relative overflow-hidden" aria-labelledby="cta-heading">
                 <div className="absolute inset-0 gradient-cta"></div>
