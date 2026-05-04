@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 const footerLinks = {
@@ -11,7 +12,7 @@ const footerLinks = {
         { href: '#', label: 'Privacy Policy' },
         { href: '#', label: 'Terms of Service' },
         { href: '#', label: 'Accessibility Statement' },
-        { href: '#', label: 'Contact Us' },
+        { href: 'mailto:divyangsahay.team@gmail.com', label: 'Contact Us' },
     ],
     government: [
         { href: 'https://disabilityaffairs.gov.in', label: 'Dept. of Empowerment of PwD', external: true },
@@ -21,6 +22,20 @@ const footerLinks = {
 };
 
 export default function Footer() {
+    const [showScrollTop, setShowScrollTop] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setShowScrollTop(window.scrollY > 400);
+        };
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
     return (
         <footer className="bg-gray-900 text-gray-300 no-print" role="contentinfo">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -115,8 +130,18 @@ export default function Footer() {
                     </div>
                 </div>
 
+                {/* Disclaimer */}
+                <div className="border-t border-gray-800 mt-10 pt-6">
+                    <p className="text-xs text-gray-600 text-center mb-6 max-w-3xl mx-auto leading-relaxed">
+                        <i className="fas fa-info-circle mr-1" aria-hidden="true"></i>
+                        <strong>Disclaimer:</strong> DivyangSahay is an informational tool designed to help persons with disabilities
+                        discover government benefits. It does not represent any government body and does not guarantee eligibility
+                        or approval. Always verify information with official government sources.
+                    </p>
+                </div>
+
                 {/* Bottom Bar */}
-                <div className="border-t border-gray-800 mt-10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
                     <p className="text-sm text-gray-500">
                         © {new Date().getFullYear()} DivyangSahay. All rights reserved.
                     </p>
@@ -130,6 +155,18 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
+
+            {/* Scroll to Top Button */}
+            {showScrollTop && (
+                <button
+                    onClick={scrollToTop}
+                    className="fixed bottom-24 right-6 z-40 w-12 h-12 rounded-full bg-primary-500 text-white shadow-lg hover:bg-primary-600 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center"
+                    aria-label="Scroll to top"
+                    title="Back to top"
+                >
+                    <i className="fas fa-chevron-up text-lg" aria-hidden="true"></i>
+                </button>
+            )}
         </footer>
     );
 }
